@@ -1,0 +1,578 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: rgba(15, 15, 15);
+}
+
+.col-25,
+.col-50,
+.col-75,
+.col-100 {
+    float: left;
+}
+
+.col-25 {
+    width: 25%;
+}
+
+.col-50 {
+    width: 50%;
+}
+
+.col-75 {
+    width: 75%;
+}
+
+.mor {
+    width: 100%;
+    height: 20px;
+    background-color: rgb(104, 91, 255, 0.9);
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(15, 15, 15, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+}
+
+nav p {
+    font-size: 35px;
+    margin-left: 5%;
+    color: rgb(255, 255, 255);
+}
+
+nav p span {
+    font-size: 40px;
+    font-weight: 900;
+    color: rgb(70, 219, 189);
+}
+
+nav>ul {
+    margin-right: 5%;
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+nav>ul>li {
+    position: relative;
+    height: 50px;
+}
+
+nav>ul>li>a {
+    display: block;
+    color: rgb(255, 255, 255);
+    height: 50px;
+    line-height: 60px;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0 15px;
+    transition: color 0.5s;
+}
+
+nav ul .dropdown {
+    position: absolute;
+    top: 40px;
+    width: 170px;
+    left: 0;
+    padding-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 200ms all;
+}
+
+nav ul .dropdown ::before {
+    content: '';
+    border: 8px solid transparent;
+    border-bottom-color: rgb(255, 255, 255);
+    position: absolute;
+    top: -6px;
+    left: 30px;
+}
+
+nav ul .dropdown ul {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+nav ul .dropdown ul li a {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 34px;
+    padding: 0 2%;
+    color: rgb(104, 91, 255);
+    transition: color 0.5s;
+}
+
+nav ul .dropdown ul li a:hover {
+    color: rgb(70, 219, 189);
+}
+
+nav>ul>li:hover>a {
+    color: rgb(70, 219, 189);
+}
+
+nav>ul>li:hover>a+.dropdown {
+    opacity: 1;
+    visibility: visible;
+    top: 50px;
+}
+
+.res-dropdown{
+    display: none;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    
+ }
+nav button{
+    cursor: pointer;
+    border: none;
+    width: 50px;
+    height: 50px;
+    background-color:rgb(15, 15, 15);
+}
+.res-dropdown ul{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200%;
+    opacity: 0;
+    display: none;
+    transition: 1s all;
+}
+.res-dropdown ul li{
+    text-align: center;
+    border: 1px solid rgb(70, 219, 189);
+    margin: 5% 3%;
+    border-radius: 5px;
+    background-color: rgb(70, 219, 189);
+    width: 90%;
+    height: 40%;
+}
+.res-dropdown ul li a{
+    color: rgb(255, 255, 255);
+    display: block;
+    padding: 3%;
+    font-size: 10px;
+}.res-dropdown button:focus + ul{
+    opacity: 1;
+    display: block;
+}
+
+
+
+header .hero-img {
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(20, 20, 20, 0.6)), url(../image/kapakbeethoven.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 280px;
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.hero-img h2 {
+    position: absolute;
+    left: 2%;
+    top: 75%;
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+}
+
+.container {
+    padding: 2% 3% !important;
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+
+/* .container .col-75 {
+    padding-right: 5%;
+}  */
+
+.container .col-75 ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col-75>ul>li img {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.col-75 ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(54, 62, 83);
+}
+.icerik div p {
+    margin: 5% 0;
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(54, 62, 83);
+    line-height: 30px;
+}
+
+.icerik div h3 {
+    text-align: justify;
+    font-weight: 600;
+    color: rgb(54, 62, 83);
+    padding: 3% 0;
+}
+
+.icerik div img {
+    width: 100%;
+    padding-top: 5%;
+}
+
+.container .col-25 {
+    margin-left: 5%;
+}
+
+.profil section:first-child {
+    display: flex;
+    border-bottom: 1px solid rgb(191, 191, 191);
+
+}
+
+.profil section:first-child img {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin: 0 5% 5% 0;
+}
+
+.profil section:first-child span p {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(54, 62, 83);
+}
+
+.profil section:first-child span a {
+    font-size: 13px;
+}
+
+.profil section:nth-child(2) {
+    padding: 5% 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgb(54, 62, 83);
+    border-bottom: 1px solid rgb(191, 191, 191);
+}
+
+.profil section:nth-child(2) h1 {
+    text-align: center;
+}
+
+.profil section:last-child {
+    display: flex;
+    padding: 5% 0;
+}
+
+.profil section:last-child .but {
+    margin-left: 5%;
+}
+
+.profil section:last-child button {
+    width: 150px;
+    height: 35px;
+    border: none;
+    background-color: rgb(104, 91, 255);
+    border-radius: 5px;
+}
+
+.profil section:last-child a {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+label {
+    position: relative;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox:checked~.on {
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+}
+
+label input {
+    display: none;
+}
+
+.arka {
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: opacity 1 s ease;
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+.on {
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(70, 219, 189);
+    border-radius: 5px;
+}
+
+.on p {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 3%;
+}
+
+.bton a {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+textarea {
+    width: 300px;
+    height: 50px;
+    border: 1px solid rgb(104, 91, 255);
+}
+
+input:checked~.arka {
+    transform: rotateX(0);
+}
+
+input:checked~.on~.bton {
+    opacity: 1;
+    visibility: visible;
+    margin-left: 325px;
+}
+
+.bton {
+    position: absolute;
+    top: 65px;
+    left: -325px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    width: 150px;
+    height: 35px;
+    border: 1px solid rgb(104, 91, 255);
+    background-color: rgb(104, 91, 255);
+    border-radius: 5px;
+}
+.res-yorum{
+    margin-top: 10%;
+    display: none;
+}
+.res-yorum p{
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(191, 191, 191);
+}
+.res-yorum textarea{
+    margin: 2% 0 9% 0;
+    width: 60%;
+    height: 100px;
+    border: 2px solid rgb(191, 191, 191);
+}
+
+footer {
+    background-color: rgb(15, 15, 15);
+}
+
+form {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+form .bulten {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.bulten h2 {
+    text-shadow: 3px 3px 3px rgb(104, 91, 255);
+    color: rgb(255, 255, 255);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 45px;
+    font-weight: 900;
+}
+
+.bul {
+    border: none;
+    border-radius: 30px;
+    width: 40%;
+    height: 50px;
+    margin: 2% 0;
+    box-sizing: border-box;
+}
+
+form .btn {
+    color: rgb(104, 91, 255);
+    background-color: rgb(15, 15, 15);
+    padding-top: 2px;
+    background-color: transparent;
+    border-radius: 30px;
+    transition: .5s;
+    position: relative;
+    width: 40%;
+    height: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 17px;
+    border: 1px solid rgb(104, 91, 255);
+}
+
+form .btn::after,
+form .btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: rgb(104, 91, 255);
+}
+
+form .btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+form .btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+form .btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+}
+
+form .btn:hover {
+    color: rgb(15, 15, 15);
+}
+
+form .btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+}
+
+.media {
+    margin: 3% auto;
+}
+
+.media ul {
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+}
+
+@media screen and (max-width: 1250px) {
+    .col-75 {
+        width: 100%;
+    }
+    .col-25 {
+        display: none;
+    }
+    .res-yorum{
+        display: block;
+    }
+}
+@media screen and (max-width: 850px){   
+    nav ul{
+        display: none;
+    }
+    .res-dropdown{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .col-75 ul li:last-child{
+        display: none;
+    }
+    .container{
+        width: 100%;
+    }
+    .hero-img h2 {
+        position: absolute;
+        left: 2%;
+        top: 70%;
+        font-size: 25px;
+        font-weight: 700;
+        color: rgb(255, 255, 255);
+    }
+    header .hero-img{
+        width: 100%;
+    }
+    .res-yorum textarea{
+        margin: 2% 0 9% 0;
+        width: 300px;
+        height: 150px;
+        border: 2px solid rgb(191, 191, 191);
+    }
+    .bul {
+        width: 60%;
+        height: 30px;
+    }
+    form .btn {
+        padding-top: 2px;
+        width: 60%;
+    }
+    .bulten h2 {
+        font-size: 20px;
+        font-weight: 900;
+    }
+}
+@media screen and (max-width: 415px) {
+    .hero-img h2 {
+        position: absolute;
+        left: 2%;
+        top: 70%;
+        font-size: 20px;
+        font-weight: 700;
+        color: rgb(255, 255, 255);
+    }
+}
