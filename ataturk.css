@@ -181,7 +181,7 @@ nav button{
 
 
 header .hero-img {
-    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(20, 20, 20, 0.6)), url(../image/gozler.jpeg);
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(20, 20, 20, 0.6)), url(./image/gozler.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
